@@ -1,0 +1,19 @@
+{
+  "name": "figma-line-by-line-bg",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Figma plugin that adds a per-line background rectangle behind every visible line of a text node.",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "assets": "node scripts/build-marketing-assets.mjs"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.108.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.5.4"
+  }
+}

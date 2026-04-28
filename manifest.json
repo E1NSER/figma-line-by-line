@@ -1,0 +1,21 @@
+{
+  "name": "Line-by-line Background",
+  "id": "1631040436154881783",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "menu": [
+    { "command": "apply",    "name": "Apply line backgrounds" },
+    { "command": "refresh",  "name": "Refresh line backgrounds" },
+    { "command": "settings", "name": "Edit settings\u2026" }
+  ],
+  "relaunchButtons": [
+    { "command": "refresh",  "name": "Refresh highlight" },
+    { "command": "settings", "name": "Edit highlight\u2026" }
+  ],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

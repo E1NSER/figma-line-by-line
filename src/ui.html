@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Line-by-line Background</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: var(--figma-color-bg, #fff);
+        --fg: var(--figma-color-text, #1c1c1c);
+        --muted: var(--figma-color-text-secondary, #6b6b6b);
+        --border: var(--figma-color-border, #e5e5e5);
+        --accent: var(--figma-color-bg-brand, #2c5cff);
+        --accent-fg: var(--figma-color-text-onbrand, #fff);
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        font-size: 12px;
+      }
+      .panel {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      h1 {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0;
+      }
+      p.help {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+      label.row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      label.row > span {
+        flex: 1;
+      }
+      input[type="number"] {
+        width: 72px;
+        padding: 6px 8px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--bg);
+        color: var(--fg);
+        font: inherit;
+      }
+      input[type="color"] {
+        width: 40px;
+        height: 28px;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+      }
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      button {
+        padding: 6px 12px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--bg);
+        color: var(--fg);
+        font: inherit;
+        cursor: pointer;
+      }
+      button.primary {
+        background: var(--accent);
+        color: var(--accent-fg);
+        border-color: transparent;
+      }
+      button:hover {
+        filter: brightness(1.05);
+      }
+      .status {
+        color: var(--muted);
+        min-height: 14px;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h1>Line-by-line Background</h1>
+      <p class="help">
+        Select one or more text nodes (or already-highlighted wrappers) and
+        adjust the values below. Backgrounds refresh automatically while this
+        panel is open.
+      </p>
+      <hr />
+      <label class="row">
+        <span>Background color</span>
+        <input id="color" type="color" value="#ffffff" />
+      </label>
+      <label class="row">
+        <span>Padding X (px)</span>
+        <input id="paddingX" type="number" min="0" step="1" value="8" />
+      </label>
+      <label class="row">
+        <span>Padding Y (px)</span>
+        <input id="paddingY" type="number" min="0" step="1" value="6" />
+      </label>
+      <label class="row">
+        <span>Row gap (px)</span>
+        <input id="rowGap" type="number" min="0" step="1" value="4" />
+      </label>
+      <label class="row">
+        <span>Corner radius (px)</span>
+        <input id="cornerRadius" type="number" min="0" step="1" value="0" />
+      </label>
+      <p class="help">
+        Row gap is the visible space between adjacent rectangles, in pixels.
+        The plugin sets the text's line height so the gap matches exactly.
+        Padding controls how much the rectangle extends around the glyphs.
+      </p>
+      <div class="status" id="status"></div>
+      <div class="actions">
+        <button id="close">Close</button>
+        <button id="apply" class="primary">Apply</button>
+      </div>
+    </div>
+    <!-- INJECT_SCRIPT -->
+  </body>
+</html>
