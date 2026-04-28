@@ -1,5 +1,9 @@
 # Line-by-line Background
 
+<p align="center">
+  <img src="assets/marketing/cover.png" alt="Line-by-line Background – per-line highlight rectangles behind text in Figma" width="920" />
+</p>
+
 Per-line background rectangles for any text frame in Figma — like a marker
 swept across each visible line of text, including soft-wrapped lines and
 hard `\n` breaks. Each rectangle hugs the actual rendered width of its
