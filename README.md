@@ -13,6 +13,10 @@ The original text node stays fully editable. The plugin wraps it in a frame
 and adds rectangles behind it. Re-editing the text? The highlight refreshes
 itself.
 
+## Install from Figma Community
+
+This plugin is [listed on the Figma Community](https://www.figma.com/community/plugin/1631040436154881783/line-by-line-background). Open the page in Figma and use **Try it out** or **Install** to add it to your account.
+
 ## Highlights
 
 - One rectangle per visible line, hugging that line's true width.
